@@ -24,7 +24,6 @@
 
 %define date
 \def\@date{\today}
-\newcommand{\date}[1]{\def\@date{#1}}
 
 %Set headers and footers
 \RequirePackage{fancyhdr}
@@ -34,7 +33,28 @@
 	\fancyhead[LE,LO]{\@author}
 	\fancyhead[CE,CO]{\@course - \@assignment}
 	\fancyhead[RE,RO]{\@date}
+	\fancyfoot[CE,CO]{\thepage}
 	\renewcommand{\headrulewidth}{1pt}
 	\renewcommand{\footrulewidth}{1pt}
 }
 \pagestyle{gmhomework}
+
+
+%Set up problem commands
+\RequirePackage{enumitem}
+\newenvironment{problem}[1]{
+	\noindent
+	\textbf{\Large Problem #1}
+	\begin{description}[leftmargin=*,labelindent=\parindent]
+}{
+	\end{description}
+	\vspace{5ex}
+}
+
+\renewcommand{\part}[1]{
+	\item[#1]
+}
+
+\newcommand{\solution}{
+	\item[Solution] \hfill \\
+}
