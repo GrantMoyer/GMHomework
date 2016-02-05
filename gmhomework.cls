@@ -31,7 +31,20 @@
 \fancypagestyle{gmhomework}{
 	\fancyhf{} %clear fields
 	\fancyhead[LE,LO]{\@author}
-	\fancyhead[CE,CO]{\@course\ ---\ \@assignment}
+	\fancyhead[CE,CO]{ % hyphen only if both course and assignment present
+		\if\relax\@course\relax
+			\if\relax\@assignment\relax
+			\else
+				\@assignment
+			\fi
+		\else
+			\if\relax\@assignment\relax
+				\@course
+			\else
+				\@course\ ---\ \@assignment
+			\fi
+		\fi
+	}
 	\fancyhead[RE,RO]{\@date}
 	\fancyfoot[CE,CO]{\thepage}
 	\renewcommand{\headrulewidth}{1pt}
