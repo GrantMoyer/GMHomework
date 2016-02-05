@@ -31,7 +31,7 @@
 \fancypagestyle{gmhomework}{
 	\fancyhf{} %clear fields
 	\fancyhead[LE,LO]{\@author}
-	\fancyhead[CE,CO]{\@course - \@assignment}
+	\fancyhead[CE,CO]{\@course\ ---\ \@assignment}
 	\fancyhead[RE,RO]{\@date}
 	\fancyfoot[CE,CO]{\thepage}
 	\renewcommand{\headrulewidth}{1pt}
