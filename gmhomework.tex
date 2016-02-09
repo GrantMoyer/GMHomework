@@ -1,0 +1,45 @@
+\documentclass{gmhomework}
+
+\author{Grant Moyer}
+\course{GitHub}
+\assignment{Example}
+\date{2016-02-09}
+
+\begin{document}
+	%Simple problem example
+	\begin{problem}{0}
+		\part{} This is the first problem
+		\solution This is the solution to the first problem
+	\end{problem}
+
+	%Multi-part problem example
+	\begin{problem}{1}
+		\part{a.} This is part a.
+		\solution This is the solution to part a.
+
+		\part{b.} This is part b.
+		\solution This is the solution to part b.
+	\end{problem}
+
+	%Multi-part problem example with common part and different grouping
+	\begin{problem}{A}
+		\part{} Assume $x = y$.
+
+		\part{1.)} if $y = 2$, find $x$.
+		\part{b} if $x = -3$, find $y$.
+		\part{(z)} Given:
+			\begin{equation}
+				x = \sum_{n=0}^{\infty}{\left(\frac{1}{2}\right)^n}
+			\end{equation}
+		find $y$.
+
+		\solution
+		\part{1.)} $x = 2$.
+		\part{b} $y = -3$.
+		\part{(z)}
+			\begin{equation}
+				y = x = \sum_{n=0}^{\infty} \left(\frac{1} {2}\right)^n
+				  = \frac {1} {1 - \frac{1} {2}} = 2
+			\end{equation}
+	\end{problem}
+\end{document}
