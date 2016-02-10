@@ -57,7 +57,7 @@
 \RequirePackage{enumitem}
 \newenvironment{problem}[1]{
 	\noindent
-	\textbf{\Large Problem #1}
+	\textbf{\Large Problem #1}\vspace{\topsep}\nobreak\@afterheading\
 	\begin{description}[leftmargin=*,labelindent=\parindent]
 }{
 	\end{description}
@@ -69,5 +69,5 @@
 }
 
 \newcommand{\solution}{
-	\item[Solution] \hfill \\
+	\item[Solution] \hfill \\*
 }
